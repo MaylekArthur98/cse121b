@@ -18,16 +18,20 @@ const imageElement = document.querySelector('img');
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = `<strong>${currentYear}</strong>`;
-imageElement.setAttribute('scr', profilePicture);
-
+imageElement.setAttribute('src', profilePicture);
+imageElement.setAttribute('alt','Proflie image of ${profilePicture}');
 
 
 
 
 /* Step 5 - Array */
-
-
-
-
-
+let favoriteFoods = ['Burgers', 'Chicken', 'French Fries',"Rice"];
+foodElement.innerHTML = `<strong>${favoriteFoods}</strong>`; 
+let forgottenFood = "Pulled Pork";
+favoriteFoods.push(forgottenFood);
+foodElement.innerHTML += `<br>${favoriteFoods}`;
+favoriteFoods.shift();
+foodElement.innerHTML += `<br>${favoriteFoods}`;
+favoriteFoods.pop();
+foodElement.innerHTML += `<br>${favoriteFoods}`;
 
