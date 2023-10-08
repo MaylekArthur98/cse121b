@@ -2,7 +2,7 @@
 
 /* Profile Object  */
 let myProfile = {
-    name: "Maylek Arthur",
+    name: "Jane Doe",
     photo: profilePicture,
     favoriteFoods: [
         'rice',
@@ -22,19 +22,19 @@ let myProfile = {
 /* Populate Profile Object with placesLive objects */
 myProfile.placesLived.push(
     {
-        place: 'Barbados',
+        place: 'Private',
         length: '1 year'
     }
 );
 myProfile.placesLived.push(
     {
-        place: 'Maryland',
+        place: 'Private',
         length: '10+ years'
     }
 );
 myProfile.placesLived.push(
     {
-        place: 'Pennsylvania',
+        place: 'Private',
         length: '1 year and 6 months'
     }
 );
@@ -47,7 +47,7 @@ myProfile.placesLived.push(
 document.querySelector('#name').textContent = myProfile.name;
 /* Photo with attributes */
 let photo = document.querySelector('#photo');
-photo.setAttribute("src",myProfile.photo);
+photo.setAttribute('src',myProfile.photo);
 photo.setAttribute('alt',myProfile.name);
 /* Favorite Foods List*/
 myProfile.favoriteFoods.forEach(food=> {
