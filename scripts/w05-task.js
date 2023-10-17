@@ -10,7 +10,7 @@ const displayTemples = (temples) => {
         let h3 = document.createElement('h3');
         h3.textContent = temple.templeName;
         let img = document.createElement('img');
-        img.src = temple.imageURL;
+        img.src = temple.imageUrl;
         img.alt = temple.location;
         article.appendChild(h3);
         article.appendChild(img);
@@ -26,14 +26,43 @@ const getTemples = async () => {
     displayTemples(templelist);
     //console.log('TEMPLE DATA:', templelist);
 }
-
-/* reset Function */
 getTemples();
+/* reset Function */
+const reset = () => {
+    temples.innerHTML = "";
+ };
 
 
 /* sortBy Function */
+const sortBy = (temples) => {
+    reset();
 
+    let filter = document.getElementById('sortBy');
+    switch(filter.value) {
+        case 'utah':
+            displayTemples(temples.filter((temple) => {
+                return (temple.location.includes("Utah"));
+                
+            }));       
+            break;
+        case 'notutah':
+            displayTemples(temples.filter((temple) => {
+                return (!temple.location.includes("Utah"))
+            }));
+            break;
+        case 'older':
+            displayTemples(temples.filter((temple) => {
+                var date = new Date(1950, 0, 1); 
+                return date > new Date(temple.dedicated);
+            }));
+            break;
+        case 'all':
+            displayTemples(temples);
+            break;
 
+    };
+}
+document.querySelector("#sortBy").addEventListener("change", () => { sortBy(templelist)});
 
 
 /* Event Listener */
