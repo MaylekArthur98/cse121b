@@ -8,7 +8,11 @@ const displayTemples = (temples) => {
     temples.array.forEach(temple => {
         let article = document.createElement('article');
         let h3 = document.createElement('h3');
-        temples.templeName.inner.HTML
+        h3 = temple.templeName;
+        let img = document.createElement('img');
+        img.src = temple.imangeURL;
+        img.alt = temple.location;
+
     });
 };
 
