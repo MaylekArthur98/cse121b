@@ -24,21 +24,30 @@
         </ul>
     </nav>
     <header>
-        <h1>Anime Random Facts</h1>
+        <h1>Star Wars Character information</h1>
         <h2> Maylek Arthur</h2>
     </header>
     <main>
-        <div>Select which anime you want a  fact about:</div>
-        <select id="animeChoices" title = "Choos an anime.">
-            <option value="Naruto">Naruto</option>
-            <option value="OnePiece">One Piece</option>
-            <option value="BlackClover">Black Clover</option>
-            <option value="Bleach">Bleach</option>
+        <div>Star Wars Characters: </div>
+        <select id="Sides" title="which side of the force">
+            <option value="all">All</option>
+            <option value="lightSide">Light Side</option>
+            <option value="darkSide">Dark Side</option>
         </select>
-        <div id = "animeFact"></div>
+        <select id="CharacterInfo" title = "Choose a Character.">
+            <!-- <option></option>
+            <option value="1">Luke Skywalker</option>
+            <option value="11">Anakin Skywalker</option>
+            <option value="5">Princess Leia</option>
+            <option value="10">Obi-Wan Kenobi</option>
+            <option value = "14">Han Solo</option>
+            <option value = "13">Chewbacca</option>
+            <option value = "4">Darth Vader</option>
+            <option value = "21">Palpatine</option> -->
+        </select>
+        <div id = "starWarFacts"></div>
     </main>
-    
-    
+
     <footer>
         &copy;<span id="year"></span> | Final Project | CSE 121b
     </footer>
@@ -47,5 +56,6 @@
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
     <script src="scripts/project.js"></script>
-    <script src="scripts/project.html"></script>
 </body>
+
+</html>

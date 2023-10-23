@@ -1,0 +1,10 @@
+ https://swapi.dev/api/people/1/ Luke Skywalker
+ https://swapi.dev/api/people/4/ Darth Vader
+ https://swapi.dev/api/people/5/ Leia 
+ https://swapi.dev/api/people/10/ obi wan
+ https://swapi.dev/api/people/
+ https://swapi.dev/api/people/?page=2
+ https://swapi.dev/api/people/11/ anakin
+ https://swapi.dev/api/people/21/ palpatine
+ https://swapi.dev/api/people/14/ Han solo
+ https://swapi.dev/api/people/13/ chewbacca
